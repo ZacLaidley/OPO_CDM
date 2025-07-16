@@ -1,3 +1,9 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
 CREATE TABLE [CDM].[dbo].[fact_referral](
    [referral_key] [bigint] NOT NULL,
    [referral_type_key] [int] NULL,
@@ -11,7 +17,7 @@ CREATE TABLE [CDM].[dbo].[fact_referral](
    [contact_ext] [varchar](150) NULL,
    [received_via_electronic] [int] NULL,
    [electronic_referral_validated] [int] NULL,
-   [review_date_time] [datetime] NULL,
+   [review_datetime] [datetime] NULL,
    [referral_prior_to_bd_testing_or_cmo_discussion] [int] NULL,
    [triage_acknowledged_referral] [int] NULL,
    [cardiac_arrest_downtime] [int] NULL,
@@ -24,8 +30,8 @@ CREATE TABLE [CDM].[dbo].[fact_referral](
    [missed_potential_outcome] [int] NULL,
    [medical_examiner_contacted] [int] NULL,
    [medical_examiner_accepted_jurisdiction] [int] NULL,
-   [dwinsert_timestamp] [datetime] NOT NULL,
-   [dwupdate_timestamp] [datetime] NOT NULL
+   [dwinsert] [datetime] NOT NULL,
+   [dwupdate] [datetime] NOT NULL
 ) ON [PRIMARY]
 GO
 

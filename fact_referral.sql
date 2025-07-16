@@ -15,6 +15,8 @@ CREATE TABLE [CDM].[dbo].[fact_referral](
    [call_date_time] [datetime] NULL,
    [contact_phone] [varchar](25) NULL,
    [contact_ext] [varchar](150) NULL,
+   [additional_phone] [varchar](25) NULL,
+   [additional_phone_ext] [varchar](150) NULL,
    [received_via_electronic] [int] NULL,
    [electronic_referral_validated] [int] NULL,
    [review_datetime] [datetime] NULL,
